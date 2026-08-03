@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Hackweek">
+<title>Hackweek Mykonos 2026</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="appbar">
+  <span class="logo">F10ck.</span>
+  <span class="sub" id="appbar-sub">Mykonos · Samen beter</span>
+</header>
+
+<main>
+
+  <!-- ============ START ============ -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="sun"></div>
+      <div class="ascii">.. _ / Hackweek \ _ ..</div>
+      <h1>Mykonos</h1>
+      <div class="dates">19 – 26 september 2026 · Griekenland</div>
+      <span class="pill gold theme">Thema: Samen beter</span>
+      <div class="countdown" id="countdown" aria-label="Aftellen tot de hackweek"></div>
+    </div>
+
+    <div class="card">
+      <h2>Voorwoord</h2>
+      <p>In jouw handen ligt het startsein van alweer een onvergetelijke hackweek. Na maanden
+      voorbereiden ruilen we het Hollandse kantoor in voor de Griekse zon: welkom op Mykonos! Het
+      eiland van kobaltblauwe zee, witgekalkte huisjes, ronkende windmolens en zonsondergangen waar
+      zelfs de strakste deadline even voor wijkt.</p>
+      <p>Het thema van deze week: <strong>Samen beter</strong>. Want de mooiste dingen bouw je niet
+      alleen. Net zoals de oude Grieken samen tempels, mythes én de democratie optrokken, geloven wij
+      dat we verder komen door onze koppen bij elkaar te steken. Deel je kennis, vraag om hulp, vier
+      elkaars successen en durf te leunen op de mensen om je heen. Eén plus één is deze week
+      nadrukkelijk drie.</p>
+      <p>Onze vraag aan jou: zoek elkaar op. Ga naast iemand zitten met wie je nog nooit hebt
+      samengewerkt, geef die ene tip die jij als geen ander kent, en laat je verrassen door wat er
+      ontstaat als je het sámen doet.</p>
+      <p class="muted small">— De hackweekcommissie, <span class="label">«vul namen in»</span></p>
+    </div>
+
+    <div class="card center">
+      <span class="pill">Quote van het moment</span>
+      <p class="quote" id="quote" style="margin-top:12px"></p>
+    </div>
+
+    <p class="footer">Tik onderaan om te navigeren · Zet op je beginscherm voor offline gebruik</p>
+  </section>
+
+  <!-- ============ PROGRAMMA ============ -->
+  <section class="view" id="view-programma">
+    <h1>Programma</h1>
+    <div class="tipbar">De dag van vandaag licht automatisch op tijdens de hackweek. Tik op een dag om uit te klappen.</div>
+    <div id="days">
+
+      <div class="day" data-date="2026-09-19">
+        <button><span class="dnum">Dag 1</span><span><span class="dtitle">Za 19 sep — Aankomst</span><br><span class="dsub">Landen &amp; inchecken</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>Planning voor deze dag apart (afhankelijk van of we de spullen al bij het hotel kunnen droppen)</li>
+          <li>🥂 Aperitief bij aankomst</li>
+          <li>🏠 Avondeten bij de Villas</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-20">
+        <button><span class="dnum">Dag 2</span><span><span class="dtitle">Zo 20 sep — Kickoff</span><br><span class="dsub">Hackprojecten van start</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>10:00 Hacken</li><li>13:00 🏠 Lunch</li>
+          <li>14:00–17:00 Hacken</li><li>🍴 Avondeten bij restaurant</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-21">
+        <button><span class="dnum">Dag 3</span><span><span class="dtitle">Ma 21 sep — Meer hacken</span><br><span class="dsub">+ boottocht</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>10:00 Hacken</li><li>13:00 🏠 Lunch</li>
+          <li>14:00 ⛵ Activiteit: Boat trip</li><li>🍴 Avondeten bij restaurant</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-22">
+        <button><span class="dnum">Dag 4</span><span><span class="dtitle">Di 22 sep — Eigen invulling</span><br><span class="dsub">Vrije dag</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>Volledig eigen invulling</li><li>🏠 Avondeten bij de Villas</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-23">
+        <button><span class="dnum">Dag 5</span><span><span class="dtitle">Wo 23 sep</span><br><span class="dsub">Hacken &amp; activiteit</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>10:00 Hacken</li><li>13:00 🏠 Lunch</li>
+          <li>14:00–17:00 Hacken</li><li>🎯 Activiteit</li><li>🏠 Avondeten bij de Villas</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-24">
+        <button><span class="dnum">Dag 6</span><span><span class="dtitle">Do 24 sep</span><br><span class="dsub">Hacken &amp; uitgaan</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>10:00 Hacken</li><li>13:00 🥞 Lunch</li>
+          <li>14:00–17:00 Hacken</li><li>🍴 Avondeten bij restaurant</li><li>🎉 Uitgaan!</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-25">
+        <button><span class="dnum">Dag 7</span><span><span class="dtitle">Vr 25 sep — Conclusie</span><br><span class="dsub">Presentaties</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>09:00 Ontbijt</li><li>10:00–12:00 Brakke presentaties!</li><li>🏠 Lunch bij de villa</li>
+          <li>Eigen tijd</li><li>🏠 Avondeten bij de Villas</li>
+        </ul></div>
+      </div>
+
+      <div class="day" data-date="2026-09-26">
+        <button><span class="dnum">Dag 8</span><span><span class="dtitle">Za 26 sep — Naar huis</span><br><span class="dsub">Vertrek</span></span><span class="chev">›</span></button>
+        <div class="body"><ul>
+          <li>07:00 Richting vliegveld</li><li>10:00 ✈️ Vlucht terug</li>
+        </ul></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ INFO ============ -->
+  <section class="view" id="view-info">
+    <h1>Info</h1>
+
+    <div class="card">
+      <h2>✈️ Reisdetails</h2>
+      <div class="kv"><span class="k">Bestemming</span><span class="v">Leno Villas, Mykonos</span></div>
+      <div class="kv"><span class="k">Adres</span><span class="v">Leno, Mikonos 846 00, Greece</span></div>
+      <div class="kv"><span class="k">Tel</span><span class="v">+44 7488 813575</span></div>
+      <div class="kv"><span class="k">Van</span><span class="v">Amsterdam Schiphol</span></div>
+      <div class="kv"><span class="k">Naar</span><span class="v">Mykonos (JMK), Griekenland</span></div>
+      <div class="kv"><span class="k">Heen</span><span class="v"><span class="label">«vlucht»</span> 19 sep</span></div>
+      <div class="kv"><span class="k">Terug</span><span class="v"><span class="label">«vlucht»</span> 26 sep</span></div>
+      <p class="small muted" style="margin-top:12px">🚗 Bij Mykonos Airport (JMK) staan de huurbusjes klaar
+      (bestuurders: <span class="label">«vul in»</span>). Vanaf de luchthaven is het maar 10–15 min naar
+      Leno Villas. Zelf op ontdekking? Huur ter plekke een quad of scooter — het perfecte voertuig om
+      met een buddy het eiland te verkennen.</p>
+    </div>
+
+    <div class="card">
+      <h2>🏠 Verblijf: Leno Villas</h2>
+      <p>Leno Villas ligt in het hart van Mykonos, op een steenworp van het bruisende Chóra en de
+      mooiste stranden van het eiland. Verspreid over meerdere sfeervolle villa's met een gedeeld
+      zwembad en veel buitenruimte is het dé plek om overdag samen te bouwen en 's avonds samen te
+      genieten.</p>
+      <h3>Ligging</h3><p class="small">Op loopafstand van Chóra en vlak bij de zuidkust — stranden als Ornos, Psarou en Paradise Beach.</p>
+      <h3>Sfeer</h3><p class="small">Een oase van rust en Cycladische schoonheid: wit en blauw zover je kijkt.</p>
+      <h3>Waar slaap ik?</h3><p class="small">Uitgerust ben je een betere teamgenoot. Er zijn bedden genoeg en alle basics om op te laden. Claim alvast je favoriete plekje!</p>
+    </div>
+
+    <div class="card">
+      <h2>💡 Hackprojecten</h2>
+      <p class="small">Het doel is niet een afgerond product, maar samen onderzoeken, leren en bouwen. In de geest van Samen beter is elk project een teamsport.</p>
+      <h3>Project 1</h3><p class="small"><span class="label">«Projecttitel + beschrijving»</span> — benoem in je pitch hoe jullie dit sámen aanpakken.</p>
+      <h3>Project 2</h3><p class="small"><span class="label">«Projecttitel + beschrijving»</span> — nog geen team? Sluit aan bij een idee dat je energie geeft.</p>
+    </div>
+
+    <div class="card">
+      <h2>🧭 Praktische tips</h2>
+      <h3>☀️ Insmeren</h3><p class="small">Elke 2 uur en na elk zwemmoment. Vooral 12:00–15:00 opletten. Factor 30+.</p>
+      <h3>🤝 Samen beter werken</h3><p class="small">Vraag vroeg om hulp, deel je scherm, denk hardop, vier de kleine overwinningen. Een teamgenoot is beter dan een badeend.</p>
+      <h3>🐙 Wat eten?</h3><p class="small">Gyros, souvlaki, Griekse salade met feta, gegrilde octopus, tzatziki. Deel meze midden op tafel.</p>
+      <h3>🌅 Zonsondergang</h3><p class="small">Bij de windmolens (Kato Mili) en in Little Venice. Kom op tijd, neem het team mee.</p>
+      <h3>👾 Vibe coder herkennen</h3><p class="small">Glimlach achter de laptop · knikt mee op de muziek · elke bug is 'een avontuur' · frappé binnen handbereik.</p>
+    </div>
+
+    <div class="card">
+      <h2>🗣️ Griekse woordjes</h2>
+      <ul class="clean small">
+        <li><b>Γειά σου</b> — <i>jassoe</i> — hallo</li>
+        <li><b>Ευχαριστώ</b> — <i>efcharistó</i> — dank je</li>
+        <li><b>Παρακαλώ</b> — <i>parakaló</i> — alsjeblieft</li>
+        <li><b>Μαζί</b> — <i>mazí</i> — samen</li>
+        <li><b>Γιαμάς!</b> — <i>jamas</i> — proost!</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🥾 Wandelingen op Mykonos</h2>
+      <p class="small">Verken het eiland samen. Pak een buddy en duik in het witte doolhof van Chóra:</p>
+      <ul class="clean small">
+        <li>🌀 <b>Kato Mili</b> — de beroemde rij windmolens boven de stad.</li>
+        <li>💠 <b>Little Venice</b> — huisjes boven het water; dé zonsondergangplek.</li>
+        <li>⛪ <b>Panagia Paraportiani</b> — sculpturaal wit kerkje.</li>
+        <li>🐧 <b>Petros de Pelikaan</b> — de levende mascotte; zeg gedag.</li>
+        <li>🥘 <b>Matoyianni-straat</b> — winkel- en tavernastraat; verdwaal samen.</li>
+      </ul>
+      <p class="small muted">Buddyregel: niemand loopt alleen terug. Aan het eind wacht een ijskoude frappé of Mythos. Στην υγειά μας!</p>
+    </div>
+  </section>
+
+  <!-- ============ PAKLIJST ============ -->
+  <section class="view" id="view-paklijst">
+    <h1>Paklijst</h1>
+    <div class="card tight">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <strong id="pk-count" class="mono">0 / 0</strong>
+        <span class="muted small" style="margin-left:auto">jouw voortgang</span>
+      </div>
+      <div class="progresswrap"><div class="progressbar" id="pk-bar"></div></div>
+    </div>
+    <div class="tipbar">Vinkjes worden op dit toestel bewaard. Wie iets vergeet, leent van een teamgenoot — ook Samen beter. 😉</div>
+    <div id="pklist"></div>
+    <div class="btnrow"><button class="btn ghost" id="pk-reset">Alles opnieuw</button></div>
+  </section>
+
+  <!-- ============ SPEL ============ -->
+  <section class="view" id="view-spel">
+    <h1>Kruiswoordpuzzels</h1>
+    <div class="cwtabs">
+      <button data-cw="griekenland" class="active">🏛️ Griekenland</button>
+      <button data-cw="samenbeter">🤝 Samen beter</button>
+    </div>
+    <div class="tipbar">Tik een vakje aan en typ. Antwoorden worden bewaard op dit toestel.</div>
+    <div id="cwmount"></div>
+    <div class="btnrow">
+      <button class="btn" id="cw-check">Controleer</button>
+      <button class="btn gold" id="cw-reveal">Toon oplossing</button>
+      <button class="btn ghost" id="cw-clear">Wissen</button>
+    </div>
+    <div class="clues" id="cwclues"></div>
+  </section>
+
+</main>
+
+<nav class="nav" id="nav">
+  <button data-view="home" class="active"><span class="ic">🏛️</span>Start</button>
+  <button data-view="programma"><span class="ic">📅</span>Programma</button>
+  <button data-view="info"><span class="ic">ℹ️</span>Info</button>
+  <button data-view="paklijst"><span class="ic">🧳</span>Paklijst</button>
+  <button data-view="spel"><span class="ic">🧩</span>Spel</button>
+</nav>
+
+<script id="cwdata" type="application/json">{"griekenland":{"rows":14,"cols":17,"cells":[{"r":7,"c":3,"a":"W","n":10},{"r":7,"c":4,"a":"I","n":0},{"r":7,"c":5,"a":"N","n":0},{"r":7,"c":6,"a":"D","n":0},{"r":7,"c":7,"a":"M","n":0},{"r":7,"c":8,"a":"O","n":0},{"r":7,"c":9,"a":"L","n":0},{"r":7,"c":10,"a":"E","n":0},{"r":7,"c":11,"a":"N","n":0},{"r":4,"c":4,"a":"P","n":6},{"r":5,"c":4,"a":"E","n":0},{"r":6,"c":4,"a":"L","n":0},{"r":8,"c":4,"a":"K","n":0},{"r":9,"c":4,"a":"A","n":0},{"r":10,"c":4,"a":"A","n":0},{"r":11,"c":4,"a":"N","n":0},{"r":6,"c":8,"a":"S","n":8},{"r":8,"c":8,"a":"U","n":0},{"r":9,"c":8,"a":"V","n":0},{"r":10,"c":8,"a":"L","n":0},{"r":11,"c":8,"a":"A","n":0},{"r":12,"c":8,"a":"K","n":0},{"r":13,"c":8,"a":"I","n":0},{"r":3,"c":11,"a":"M","n":5},{"r":4,"c":11,"a":"Y","n":0},{"r":5,"c":11,"a":"K","n":0},{"r":6,"c":11,"a":"O","n":9},{"r":8,"c":11,"a":"O","n":0},{"r":9,"c":11,"a":"S","n":0},{"r":5,"c":1,"a":"A","n":7},{"r":5,"c":2,"a":"T","n":0},{"r":5,"c":3,"a":"H","n":0},{"r":5,"c":5,"a":"N","n":0},{"r":5,"c":6,"a":"E","n":0},{"r":9,"c":1,"a":"S","n":11},{"r":9,"c":2,"a":"T","n":0},{"r":9,"c":3,"a":"R","n":0},{"r":9,"c":5,"a":"N","n":0},{"r":9,"c":6,"a":"D","n":0},{"r":3,"c":12,"a":"Y","n":0},{"r":3,"c":13,"a":"T","n":0},{"r":3,"c":14,"a":"H","n":0},{"r":3,"c":15,"a":"O","n":0},{"r":3,"c":16,"a":"S","n":0},{"r":0,"c":15,"a":"G","n":1},{"r":1,"c":15,"a":"Y","n":0},{"r":2,"c":15,"a":"R","n":0},{"r":4,"c":15,"a":"S","n":0},{"r":13,"c":6,"a":"O","n":13},{"r":13,"c":7,"a":"L","n":0},{"r":13,"c":9,"a":"J","n":0},{"r":13,"c":10,"a":"F","n":0},{"r":1,"c":1,"a":"K","n":2},{"r":2,"c":1,"a":"R","n":0},{"r":3,"c":1,"a":"E","n":0},{"r":4,"c":1,"a":"T","n":0},{"r":6,"c":12,"a":"U","n":0},{"r":6,"c":13,"a":"Z","n":0},{"r":6,"c":14,"a":"O","n":0},{"r":1,"c":13,"a":"F","n":3},{"r":2,"c":13,"a":"E","n":0},{"r":4,"c":13,"a":"A","n":0},{"r":3,"c":0,"a":"Z","n":4},{"r":3,"c":2,"a":"U","n":0},{"r":3,"c":3,"a":"S","n":0},{"r":11,"c":2,"a":"Z","n":12},{"r":11,"c":3,"a":"O","n":0}],"across":[{"num":4,"clue":"Oppergod van de Olympus","row":3,"col":0,"len":4,"answer":"ZEUS"},{"num":5,"clue":"Grieks biermerk (en oud verhaal)","row":3,"col":11,"len":6,"answer":"MYTHOS"},{"num":7,"clue":"Hoofdstad van Griekenland","row":5,"col":1,"len":6,"answer":"ATHENE"},{"num":9,"clue":"Anijssterke Griekse borrel","row":6,"col":11,"len":4,"answer":"OUZO"},{"num":10,"clue":"Wit bouwwerk boven Chora","row":7,"col":3,"len":9,"answer":"WINDMOLEN"},{"num":11,"clue":"Ornos en Paradise zijn er twee","row":9,"col":1,"len":6,"answer":"STRAND"},{"num":12,"clue":"Schijnt volop boven de Cycladen","row":11,"col":2,"len":3,"answer":"ZON"},{"num":13,"clue":"Vrucht en symbool van vrede","row":13,"col":6,"len":5,"answer":"OLIJF"}],"down":[{"num":1,"clue":"Griekse wrap van het spit","row":0,"col":15,"len":5,"answer":"GYROS"},{"num":2,"clue":"Grootste Griekse eiland","row":1,"col":1,"len":5,"answer":"KRETA"},{"num":3,"clue":"Griekse witte kaas","row":1,"col":13,"len":4,"answer":"FETA"},{"num":5,"clue":"Ons hackweek-eiland","row":3,"col":11,"len":7,"answer":"MYKONOS"},{"num":6,"clue":"Petros, mascotte van Mykonos","row":4,"col":4,"len":8,"answer":"PELIKAAN"},{"num":8,"clue":"Grieks vleesspiesje","row":6,"col":8,"len":8,"answer":"SOUVLAKI"}]},"samenbeter":{"rows":14,"cols":14,"cells":[{"r":6,"c":2,"a":"V","n":8},{"r":6,"c":3,"a":"E","n":0},{"r":6,"c":4,"a":"R","n":0},{"r":6,"c":5,"a":"T","n":0},{"r":6,"c":6,"a":"R","n":0},{"r":6,"c":7,"a":"O","n":0},{"r":6,"c":8,"a":"U","n":0},{"r":6,"c":9,"a":"W","n":0},{"r":6,"c":10,"a":"E","n":0},{"r":6,"c":11,"a":"N","n":0},{"r":5,"c":3,"a":"F","n":7},{"r":7,"c":3,"a":"E","n":0},{"r":8,"c":3,"a":"D","n":0},{"r":9,"c":3,"a":"B","n":0},{"r":10,"c":3,"a":"A","n":0},{"r":11,"c":3,"a":"C","n":0},{"r":12,"c":3,"a":"K","n":0},{"r":2,"c":6,"a":"S","n":4},{"r":3,"c":6,"a":"Y","n":0},{"r":4,"c":6,"a":"N","n":0},{"r":5,"c":6,"a":"E","n":0},{"r":7,"c":6,"a":"G","n":0},{"r":8,"c":6,"a":"I","n":0},{"r":9,"c":6,"a":"E","n":0},{"r":2,"c":10,"a":"H","n":5},{"r":3,"c":10,"a":"A","n":0},{"r":4,"c":10,"a":"C","n":0},{"r":5,"c":10,"a":"K","n":0},{"r":7,"c":10,"a":"N","n":0},{"r":9,"c":5,"a":"H","n":11},{"r":9,"c":7,"a":"L","n":0},{"r":9,"c":8,"a":"P","n":0},{"r":9,"c":9,"a":"E","n":0},{"r":9,"c":10,"a":"N","n":0},{"r":2,"c":2,"a":"P","n":3},{"r":2,"c":3,"a":"R","n":0},{"r":2,"c":4,"a":"O","n":0},{"r":2,"c":5,"a":"O","n":0},{"r":2,"c":7,"a":"T","n":0},{"r":8,"c":8,"a":"S","n":10},{"r":10,"c":8,"a":"R","n":0},{"r":11,"c":8,"a":"I","n":0},{"r":12,"c":8,"a":"N","n":0},{"r":13,"c":8,"a":"T","n":14},{"r":3,"c":9,"a":"S","n":6},{"r":3,"c":11,"a":"M","n":0},{"r":3,"c":12,"a":"E","n":0},{"r":3,"c":13,"a":"N","n":0},{"r":0,"c":12,"a":"D","n":1},{"r":1,"c":12,"a":"E","n":0},{"r":2,"c":12,"a":"L","n":0},{"r":4,"c":12,"a":"N","n":0},{"r":8,"c":0,"a":"B","n":9},{"r":8,"c":1,"a":"U","n":0},{"r":8,"c":2,"a":"D","n":0},{"r":8,"c":4,"a":"Y","n":0},{"r":11,"c":0,"a":"F","n":12},{"r":11,"c":1,"a":"L","n":0},{"r":11,"c":2,"a":"O","n":0},{"r":11,"c":4,"a":"K","n":0},{"r":11,"c":7,"a":"P","n":13},{"r":11,"c":9,"a":"T","n":0},{"r":11,"c":10,"a":"C","n":0},{"r":11,"c":11,"a":"H","n":0},{"r":13,"c":9,"a":"E","n":0},{"r":13,"c":10,"a":"A","n":0},{"r":13,"c":11,"a":"M","n":0},{"r":1,"c":4,"a":"C","n":2},{"r":3,"c":4,"a":"D","n":0},{"r":4,"c":4,"a":"E","n":0}],"across":[{"num":3,"clue":"Zeg je met geheven glas (jamas!)","row":2,"col":2,"len":6,"answer":"PROOST"},{"num":6,"clue":"... beter (thema van de week)","row":3,"col":9,"len":5,"answer":"SAMEN"},{"num":8,"clue":"Basis van samenwerking","row":6,"col":2,"len":10,"answer":"VERTROUWEN"},{"num":9,"clue":"Je vaste maatje","row":8,"col":0,"len":5,"answer":"BUDDY"},{"num":11,"clue":"Iemand een handje ...","row":9,"col":5,"len":6,"answer":"HELPEN"},{"num":12,"clue":"Onze community","row":11,"col":0,"len":5,"answer":"FLOCK"},{"num":13,"clue":"Korte presentatie van je idee","row":11,"col":7,"len":5,"answer":"PITCH"},{"num":14,"clue":"Groep die samen bouwt","row":13,"col":8,"len":4,"answer":"TEAM"}],"down":[{"num":1,"clue":"Kennis met elkaar ...","row":0,"col":12,"len":5,"answer":"DELEN"},{"num":2,"clue":"Dit schrijft een programmeur","row":1,"col":4,"len":4,"answer":"CODE"},{"num":4,"clue":"1 + 1 = 3","row":2,"col":6,"len":8,"answer":"SYNERGIE"},{"num":5,"clue":"Wat we deze week doen","row":2,"col":10,"len":6,"answer":"HACKEN"},{"num":7,"clue":"Opbouwende terugkoppeling","row":5,"col":3,"len":8,"answer":"FEEDBACK"},{"num":10,"clue":"Korte intensieve werkperiode","row":8,"col":8,"len":6,"answer":"SPRINT"}]}}</script>
+<script src="app.js"></script>
+</body>
+</html>
