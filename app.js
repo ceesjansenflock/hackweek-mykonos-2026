@@ -186,6 +186,105 @@ document.getElementById('cw-clear').addEventListener('click', ()=>{
 });
 renderCrossword();
 
+/* ---------------- Alphadoku (Griekse sudoku) ---------------- */
+const AD = JSON.parse(document.getElementById('adata').textContent);
+let curAd = 0;      // puzzelindex
+let adSel = null;   // geselecteerd vakje {r,c}
+function adKey(){ return 'hw_ad_'+curAd; }
+function loadAd(){ try{ return JSON.parse(localStorage.getItem(adKey())||'{}'); }catch(e){ return {}; } }
+function saveAd(o){ try{ localStorage.setItem(adKey(), JSON.stringify(o)); }catch(e){} }
+
+function renderAlphadoku(){
+  const p = AD.puzzles[curAd];
+  const mount = document.getElementById('admount');
+  const entries = loadAd();
+  const grid = document.createElement('div'); grid.className='adgrid';
+  for(let r=0;r<9;r++){
+    for(let c=0;c<9;c++){
+      const g = p.givens[r][c];
+      const div = document.createElement('div');
+      div.className = 'adcell';
+      if(c===2||c===5) div.classList.add('br');
+      if(r===2||r===5) div.classList.add('bb');
+      div.dataset.r=r; div.dataset.c=c;
+      if(g){
+        div.classList.add('given'); div.textContent = AD.letters[g-1];
+      } else {
+        const v = entries[r+','+c];
+        if(v) div.textContent = AD.letters[v-1];
+        if(adSel && adSel.r===r && adSel.c===c) div.classList.add('sel');
+        div.addEventListener('click', ()=>{ adSel={r:r,c:c}; renderAlphadoku(); });
+      }
+      grid.appendChild(div);
+    }
+  }
+  mount.innerHTML=''; mount.appendChild(grid);
+}
+function placeAd(digit){
+  if(!adSel) return;
+  const p = AD.puzzles[curAd];
+  if(p.givens[adSel.r][adSel.c]) return;
+  const en = loadAd(); const k = adSel.r+','+adSel.c;
+  if(digit===0) delete en[k]; else en[k]=digit;
+  saveAd(en); renderAlphadoku();
+}
+function renderPalette(){
+  const pal = document.getElementById('adpalette'); pal.innerHTML='';
+  AD.letters.forEach((L,i)=>{
+    const b=document.createElement('button'); b.textContent=L;
+    b.addEventListener('click', ()=>placeAd(i+1)); pal.appendChild(b);
+  });
+  const e=document.createElement('button'); e.className='erase'; e.textContent='✕ wis';
+  e.addEventListener('click', ()=>placeAd(0)); pal.appendChild(e);
+}
+function renderLegend(){
+  document.getElementById('adlegend').innerHTML =
+    'Cijfertoetsen 1–9 werken ook · ' + AD.letters.map((L,i)=>L+'='+AD.names[i]).join(' · ');
+}
+document.querySelectorAll('#adtabs button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('#adtabs button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); curAd=+b.dataset.ad; adSel=null; renderAlphadoku();
+  });
+});
+document.getElementById('ad-check').addEventListener('click', ()=>{
+  const p=AD.puzzles[curAd]; const en=loadAd();
+  document.querySelectorAll('#admount .adcell').forEach(div=>{
+    if(div.classList.contains('given')) return;
+    const r=+div.dataset.r, c=+div.dataset.c, v=en[r+','+c];
+    div.classList.remove('good','bad');
+    if(v) div.classList.add(v===p.solution[r][c]?'good':'bad');
+  });
+});
+document.getElementById('ad-reveal').addEventListener('click', ()=>{
+  if(!confirm('Hele oplossing tonen?')) return;
+  const p=AD.puzzles[curAd]; const en={};
+  for(let r=0;r<9;r++) for(let c=0;c<9;c++) if(!p.givens[r][c]) en[r+','+c]=p.solution[r][c];
+  saveAd(en); renderAlphadoku();
+});
+document.getElementById('ad-clear').addEventListener('click', ()=>{
+  if(!confirm('Dit rooster leegmaken?')) return;
+  saveAd({}); adSel=null; renderAlphadoku();
+});
+document.addEventListener('keydown', e=>{
+  if(document.getElementById('game-alphadoku').hidden) return;
+  if(!document.getElementById('view-spel').classList.contains('active')) return;
+  if(e.key>='1' && e.key<='9'){ placeAd(+e.key); }
+  else if(e.key==='Backspace' || e.key==='Delete'){ placeAd(0); }
+});
+renderPalette(); renderLegend(); renderAlphadoku();
+
+/* ---------------- Game switch (Kruiswoord / Alphadoku) ---------------- */
+document.querySelectorAll('#gamesegment button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const g=b.dataset.game;
+    document.querySelectorAll('#gamesegment button').forEach(x=>x.classList.toggle('active', x===b));
+    document.getElementById('game-kruiswoord').hidden = g!=='kruiswoord';
+    document.getElementById('game-alphadoku').hidden = g!=='alphadoku';
+    if(g==='alphadoku') renderAlphadoku();
+  });
+});
+
 /* ---------------- Restore last view ---------------- */
 try{ const v=localStorage.getItem('hw_view'); if(v) showView(v); }catch(e){}
 

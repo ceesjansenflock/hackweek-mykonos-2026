@@ -1,4 +1,4 @@
-const CACHE = 'hackweek-mykonos-2026-v1';
+const CACHE = 'hackweek-mykonos-2026-v2';
 const ASSETS = [
   './',
   './index.html',

@@ -139,3 +139,27 @@ ul.clean li:last-child{border-bottom:0}
 .tipbar{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;
   font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .footer{color:var(--muted);font-size:.75rem;text-align:center;margin:20px 0 6px;font-family:var(--mono)}
+
+/* Segmented control (Kruiswoord / Alphadoku) */
+.segment{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:5px;margin-bottom:16px}
+.segment button{flex:1;background:none;border:0;color:var(--muted);padding:10px;border-radius:10px;font:inherit;font-weight:700;cursor:pointer}
+.segment button.active{background:var(--accent);color:var(--bg)}
+
+/* Alphadoku */
+.adgrid{display:grid;grid-template-columns:repeat(9,1fr);width:min(100%,360px);aspect-ratio:1/1;
+  margin:0 auto;border:2px solid var(--accent);border-radius:6px;overflow:hidden;background:var(--line)}
+.adcell{position:relative;display:grid;place-items:center;background:var(--bg);color:var(--accent);
+  font-family:var(--mono);font-size:clamp(15px,5vw,22px);cursor:pointer;user-select:none;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.adcell.given{background:var(--card2);color:#fff;font-weight:700;cursor:default}
+.adcell.sel{background:#24405f;box-shadow:inset 0 0 0 2px var(--accent2)}
+.adcell.good{color:var(--ok)}
+.adcell.bad{color:var(--bad);background:#3a1414}
+.adcell.br{border-right:2px solid var(--accent)}
+.adcell.bb{border-bottom:2px solid var(--accent)}
+.adpalette{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:360px;margin:16px auto 0}
+.adpalette button{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:10px;
+  padding:12px 0;font-family:var(--mono);font-size:19px;cursor:pointer}
+.adpalette button:active{background:var(--accent);color:var(--bg)}
+.adpalette button.erase{color:var(--bad);font-family:var(--sans)}
+.adlegend{margin-top:14px;color:var(--muted);font-size:.75rem;text-align:center;font-family:var(--mono);line-height:1.7}
