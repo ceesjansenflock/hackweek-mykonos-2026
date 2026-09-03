@@ -175,11 +175,12 @@ ul.clean li:last-child{border-bottom:0}
 .walk .wsub{display:block; color:var(--muted); font-size:.78rem}
 .walk .chev{margin-left:auto; transition:transform .2s; color:var(--muted)}
 .walk.open .chev{transform:rotate(90deg)}
-.walk .body{max-height:0; overflow:hidden; transition:max-height .35s ease}
-.walk.open .body{max-height:1800px}
-.walk .body > *{margin-left:14px; margin-right:14px}
-.walk .body > p{margin-top:0}
-.walk .body > .btnrow{margin-bottom:14px}
+.walk .body{display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s ease}
+.walk.open .body{grid-template-rows:1fr}
+.walk .bodyinner{overflow:hidden; min-height:0}
+.walk .bodyinner > *{margin-left:14px; margin-right:14px}
+.walk .bodyinner > p{margin-top:0}
+.walk .bodyinner > .btnrow{margin-bottom:14px}
 .walkmap{display:block; width:100%; height:auto; margin-bottom:10px;
   border-radius:10px; border:1px solid var(--line); background:#fff}
 
@@ -191,4 +192,3 @@ ul.clean li:last-child{border-bottom:0}
 .team{display:flex; flex-wrap:wrap; gap:6px}
 .member{font-family:var(--mono); font-size:.72rem; color:var(--text); background:var(--card2);
   border:1px solid var(--line); padding:4px 10px; border-radius:999px}
-.member.maybe{color:var(--muted); border-style:dashed}

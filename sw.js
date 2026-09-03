@@ -1,4 +1,4 @@
-const CACHE = 'hackweek-mykonos-2026-v8';
+const CACHE = 'hackweek-mykonos-2026-v11';
 const ASSETS = [
   './',
   './index.html',
@@ -9,12 +9,12 @@ const ASSETS = [
   './icons/icon-512.png',
   './icons/apple-touch-icon.png',
   './icons/favicon-32.png',
-  './images/wandeling-1-psarou.webp',
-  './images/wandeling-1-platis-gialos.webp',
-  './images/wandeling-2-agia-anna.webp',
-  './images/wandeling-4-ornos.webp',
-  './images/wandeling-5-korfos.webp',
-  './images/wandeling-6-megali-ammos.webp'
+  './images/wandeling-psarou.webp',
+  './images/wandeling-platis-gialos.webp',
+  './images/wandeling-agia-anna.webp',
+  './images/wandeling-ornos.webp',
+  './images/wandeling-korfos.webp',
+  './images/wandeling-megali-ammos.webp'
 ];
 
 self.addEventListener('install', e=>{
