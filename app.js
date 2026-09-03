@@ -54,7 +54,7 @@ function rotateQuote(){
 rotateQuote(); setInterval(rotateQuote, 8000);
 
 /* ---------------- Program: collapse + today ---------------- */
-document.querySelectorAll('.day > button').forEach(btn=>{
+document.querySelectorAll('.day > button, .walk > button').forEach(btn=>{
   btn.addEventListener('click', ()=> btn.parentElement.classList.toggle('open'));
 });
 (function highlightToday(){

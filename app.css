@@ -14,6 +14,7 @@ body{
   padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom));
 }
 a{color:var(--accent)}
+img{max-width:100%; height:auto}
 h1,h2,h3{font-family:var(--mono); line-height:1.2; margin:0 0 .4em}
 h1{font-size:1.5rem} h2{font-size:1.2rem;color:var(--white)} h3{font-size:1rem;color:var(--accent)}
 p{margin:0 0 .8em}
@@ -163,3 +164,21 @@ ul.clean li:last-child{border-bottom:0}
 .adpalette button:active{background:var(--accent);color:var(--bg)}
 .adpalette button.erase{color:var(--bad);font-family:var(--sans)}
 .adlegend{margin-top:14px;color:var(--muted);font-size:.75rem;text-align:center;font-family:var(--mono);line-height:1.7}
+
+/* Wandelingen */
+.walk{border:1px solid var(--line); border-radius:14px; margin-bottom:10px; overflow:hidden; background:var(--card2)}
+.walk > button{width:100%; text-align:left; background:none; border:0; color:var(--text);
+  padding:12px 14px; font:inherit; display:flex; align-items:center; gap:12px; cursor:pointer}
+.walk .wnum{font-family:var(--mono); color:var(--accent2); font-weight:700; flex:0 0 auto}
+.walk .wmeta{min-width:0}
+.walk .wtitle{display:block; font-weight:600}
+.walk .wsub{display:block; color:var(--muted); font-size:.78rem}
+.walk .chev{margin-left:auto; transition:transform .2s; color:var(--muted)}
+.walk.open .chev{transform:rotate(90deg)}
+.walk .body{max-height:0; overflow:hidden; transition:max-height .35s ease}
+.walk.open .body{max-height:1800px}
+.walk .body > *{margin-left:14px; margin-right:14px}
+.walk .body > p{margin-top:0}
+.walk .body > .btnrow{margin-bottom:14px}
+.walkmap{display:block; width:100%; height:auto; margin-bottom:10px;
+  border-radius:10px; border:1px solid var(--line); background:#fff}
