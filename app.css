@@ -182,3 +182,13 @@ ul.clean li:last-child{border-bottom:0}
 .walk .body > .btnrow{margin-bottom:14px}
 .walkmap{display:block; width:100%; height:auto; margin-bottom:10px;
   border-radius:10px; border:1px solid var(--line); background:#fff}
+
+/* Hackprojecten */
+.proj{border-top:1px solid var(--line); padding-top:12px; margin-top:12px}
+.proj:first-of-type{border-top:0; padding-top:0}
+.proj h3{margin-bottom:.3em}
+.proj p{margin:0 0 8px}
+.team{display:flex; flex-wrap:wrap; gap:6px}
+.member{font-family:var(--mono); font-size:.72rem; color:var(--text); background:var(--card2);
+  border:1px solid var(--line); padding:4px 10px; border-radius:999px}
+.member.maybe{color:var(--muted); border-style:dashed}
